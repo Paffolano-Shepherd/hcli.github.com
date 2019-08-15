@@ -11,6 +11,65 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style type="text/css">
+			body{
+				margin:0 auto;
+				padding:0px;
+			}
+			.btn-slide{
+				background:gray;
+				width:65px;
+				height:35px;
+				text-align:center;
+				font-weight:700;
+				margin:0;
+				display:block;
+				color:#fff;
+				text-decoration:none;
+			}
+		</style>
+		<script type="text/javascript">
+			function showdiv1(){
+				document.getElementById("hpn1").style.display="block";
+				document.getElementById("strHref1").innerHTML="Fold";
+				document.getElementById("strHref1").href="javascript:hidediv1();";
+			}
+			function hidediv1(){
+				document.getElementById("hpn1").style.display="none";
+				document.getElementById("strHref1").innerHTML="More";
+				document.getElementById("strHref1").href="javascript:showdiv1();";
+			}
+			function showdiv2(){
+				document.getElementById("hpn2").style.display="block";
+				document.getElementById("strHref2").innerHTML="Fold";
+				document.getElementById("strHref2").href="javascript:hidediv2();";
+			}
+			function hidediv2(){
+				document.getElementById("hpn2").style.display="none";
+				document.getElementById("strHref2").innerHTML="More";
+				document.getElementById("strHref2").href="javascript:showdiv2();";
+			}
+			function showindiva(){
+				document.getElementById("in-hpn-a").style.display="block";
+				document.getElementById("in-strHref-a").innerHTML="Close Summary";
+				document.getElementById("in-strHref-a").href="javascript:hideindiva();";
+			}
+			function hideindiva(){
+				document.getElementById("in-hpn-a").style.display="none";
+				document.getElementById("in-strHref-a").innerHTML="Summary";
+				document.getElementById("in-strHref-a").href="javascript:showindiva();";
+			}
+			function showdiv3(){
+				document.getElementById("hpn3").style.display="block";
+				document.getElementById("strHref3").innerHTML="Fold";
+				document.getElementById("strHref3").href="javascript:hidediv3();";
+			}
+			function hidediv3(){
+				document.getElementById("hpn3").style.display="none";
+				document.getElementById("strHref3").innerHTML="More";
+				document.getElementById("strHref3").href="javascript:showdiv3();";
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -53,41 +112,68 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Course Projects</h1>
-							<p><h2>Artificial Intelligence and User Interface</h2><br />
-							<a href="CourseProjects_PKU">A Self-Programmed Single-Player RPG, PKUmon.</a></p>
-							<br /><br /><p><h2>Pattern Recognition</h2><br />
-							<a href="CourseProjects_font">Font Recognition.</a></p>
-							<br /><br /><p><h2>Game Theory</h2><br />
-							<a href="CourseProjects_robust">Robust Equilirium.</a></p>
-							<br /><br /><p><h2>Data Analysis and Econometric Programming</h2><br />
-							<a href="CourseProjects_DAC">Direction of Advanced Culture? Research on the Sex and Gender Perception of CCP Member.</a></p>
-							<br /><br /><p><h2>Econometric Theory</h2><br />
-							<a href="CourseProjects_PCM">A Trial of Applying Principal Component Method to Promote OLS Regression Analysis.</a></p>
+							<h2>Self-Made RPG</h2><br />
+							<div id="hpn1" style="display:none">
+								<p>This role-playing game (RPG) was a group project I conducted with my partner in my freshman year. Please click <a href="files/Course Projects/PKUmon2.0.rar">here</a> to download, and as long as your computer has Visual Studio, clicking the "PKUmon.exe" file should start the game. It is basically a more strategic version of the famous <em>Pokemon</em> with the map of Peking University (PKU), and thus we named it PKUmon. Our game goes beyond Pokemon in that we design each battle as a two-versus-two 5*5-chessboard game. In this way, players are allowed to perform more possibilities, as the battle formation of the two in-field monsters and the distances between monsters are all important considerations.</p>
+								<p>I was mainly in charge of the programming part, that is the data structure and the AI algorithm. My partner developed the user interface. I revised the Genetic Algorithm (GA) to suit this game to make it faster while maintaining its excellent performance. With this algorithm, AI's monsters know how to judge the situation, as they are aggressive when taking the lead, while being evasive when feeling losing it. Also, both monsters tend to get close to each other.</p>
+								<p>For an example, I show a screenshot of battle below:</p>
+								<img src="images/rpg_ss4.JPG">
+								<p>Additionally, players can interact with non-player characters (NPC) by first facing one of them and then clicking "space" on the keyboard. An example:</p>
+								<img src="images/rpg_ss1.JPG">
+								<p>Nonetheless, we only had one semester to build this game, so the completeness is not high. But we still provide two battles in a secret room, and the following two figures show the way:</p>
+								<img src="images/rpg_ss2.JPG">
+								<img src="images/rpg_ss3.JPG">
+								<img src="images/rpg_ss4.JPG">
+								<p>Above, the difficulty of both battles is differentiated into "Easy" and "Hard", and although one can easily handle the former, the calculative AI designed by me makes the latter battle very tough. Now, enjoy this game!</p>
+							</div>
+							<p><a href="javascript:showdiv1();" id="strHref1" class="btn-slide">More</a></p>
+							
+							<br /><h2>Equilibrium Refinement</h2><br />
+							<div id="hpn2" style="display:none">
+								<p>I came up with the notion of <em>Robust Equilibrium</em> when I was learning Fudenberg and Tirole's <em>Game Theory</em>, and I formalized it as a research proposal. Please click <a href="files/Course Projects/robust equilibrium.pdf">here</a> to view this proposal and <a href="files/Course Projects/ppt_robust equilibrium.pptx">here</a> to download the presentation PPT.</p>
+								<p>I thought it is important because it defines the refinement concept very differently from literature, like the seminal work by Selten (1975). Consider a two-player game, and the basic insight is that when one player's strategy is slightly perturbed and the other changes his strategy immediately to response to this perturbance, if the former player has the incentive to repress this perturbance given his opponent's new response, then this strategy of his is a <em>robust anticipation</em> of his opponent. And when everyone performs a robust anticipation in a nash equilibrium, this equilibrium is robust.</p>
+								<p>This notion tests an equilirium's robustness by directly perturbing players' strategy, instead of perturbing the game like in most of the literature of refinement, and clearly this method is also closely connected with true-life applications. Although I did not have the time for a general theorem, I gave an informal proof for the equilibrium existence in two-player cases. Another important result this notion gives is that it can be utilized to develop an algorithm that solves certain kinds of numerical games very fast. My result shows that, in any two-player finite-dimension game, the robust equilibria are right the Deleted Maximal Points (DMP) of a well defined function, and I propose to use a noisy gradient ascent algorithm to find these maxima. I have performed this idea practically, as I used Python to program it and it turned out to be both fast and accurate.</p>
+							</div>
+							<p><a href="javascript:showdiv2();" id="strHref2" class="btn-slide">More</a></p>
+							
+							<br /><h2>Behavioral Collective Action</h2><br />
+							<div id="hpn4" style="display:none">
+							</div>
+							<p><a href="javascript:showdiv4();" id="strHref4" class="btn-slide">More</a></p>
+							
+							<br /><h2>The Growth of China</h2><br />
+							<div id="hpn3" style="display:none">
+								<p>I finished this project in June 2019 for a course on economic development. It is a development report based on both factoral and sectoral GDP-decomposition method. Please click <a href="files/Course Projects/china growth.pdf">here</a> to view the report and <a href="files/Course Projects/codes_china growth.rar">here</a> for the coding. For a quick understanding of what this report is about, please click the "summary" below.</p>
+								<div id="in-hpn-a" style="display:none;line-height:18px">
+									<font size="-0.5" face="Times" color="#bbbbbb">
+									<p style="margin-top:0"><strong>Summary.</strong> From both factoral and sectoral angles, this paper examines China’s economic growth since the Reform in 1978 in order to derive some growth patterns explaining the economic logic behind the great China Miracle. Our objective also lies in summarizing different views in literature of China’s growth and trying to mitigate some conflicts among the scholars, debates over the role of TFP and capital, the contribution of agriculture, etc.. Through out the paper, we examine the extent to which this paper is connected with and differentiated from previous studies.</p>
+									<p style="margin-top:-1em">For factoral analysis, we apply Zhu’s (2012) growth accounting approach at both aggregate and sectoral levels. We discover some change of role of the growth of two factors, TFP and capital, since although TFP’s contribution to total growth dominates during the entire history, it drops sharply from 77% to 57% after 2001 in company with the rise of capital growth whose explanatory power rise from less than 10% to 35%. We further show that this change during the early 2000s should be completely attributed to the factoral role interchange happening in non-agricultural sector, as TFP growth accounted for 75% of non-agricultural growth before 2001 while capital growth has explained half of it after 2001. However, the agricultural growth has been constantly driven by powerful TFP growth. Another phenomenon we disclose is that labor force has been escaping from agriculture to other industries implying an inter-sectoral structural transformation.</p>
+									<p style="margin-top:-1em">The labor migration pattern above makes sectoral analysis necessary. To illustrate the economic incentives driving the migration, we develop a useful notion, Model Price Ratio (MPR), defined as the theoretical wage of one sector to that of agricultural department deduced from standard Cobb-Douglas production function. The gap between the realized MPR and its theoretical value 1 demonstrates the deviation of reality from the theory that ideal labor market yields the same wages in different markets. Through three ways, we justify that this deviation is an adequate proxy for migration restriction. MPR has been obviously higher than 1 since the 1950s, and this confirms the existence of both demand and friction of China’s structural transformation. We also define the counterpart notion for capital, Model Price Ratio of Capital (MPRC), which stays close to 1 after 2001, but also has been steadily increasing since reform.</p>
+									<p style="margin-top:-1em">Finally, we draw some prospects on China’s future development. MPR’s rebound in 2016 shows that there will still be great demand for structural transformation, and that MPRC has increased sharply since 2013 implies that capital’s role will continue to rise. We make the policy suggestion that Chinese government should stick to serious reforms, and we list some examples.</p>
+									</font>
+								</div>
+								<p><a href="javascript:showindiva();" id="in-strHref-a">Summary</a></p>
+							</div>
+							<p><a href="javascript:showdiv3();" id="strHref3" class="btn-slide">More</a></p>
+							
+							<br /><h2>Font Recognition</h2><br />
+							<div id="hpn5" style="display:none">
+							</div>
+							<p><a href="javascript:showdiv5();" id="strHref5" class="btn-slide">More</a></p>
+							
+							<br /><h2>PCA Improves OLS</h2><br />
+							<div id="hpn6" style="display:none">
+							</div>
+							<p><a href="javascript:showdiv6();" id="strHref6" class="btn-slide">More</a></p>	
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
+							<p>Address: National School of Development, Peking University, Beijing, China<br />
+							   Email: <a href="mailto:hli12320@terpmail.umd.edu">hli12320@terpmail.umd.edu</a> / <a href="mailto:hongcheng.li@pku.edu.cn">hongcheng.li@pku.edu.cn</a><br />
+							   Phone: (+028) 18810719819</p>
 							<ul class="copyright">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>

@@ -11,6 +11,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style type="text/css">
+			body{
+				margin:0 auto;
+				padding:0px;
+			}
+			.btn-slide{
+				background:gray;
+				width:65px;
+				height:35px;
+				text-align:center;
+				font-weight:700;
+				margin:0 auto;
+				display:block;
+				color:#fff;
+				text-decoration:none;
+			}
+		</style>
+		<script type="text/javascript">
+			function showdiv1(){
+				document.getElementById("hpn1").style.display="block";
+				document.getElementById("strHref1").innerHTML="Fold";
+				document.getElementById("strHref1").href="javascript:hidediv1();";
+			}
+			function hidediv1(){
+				document.getElementById("hpn1").style.display="none";
+				document.getElementById("strHref1").innerHTML="More";
+				document.getElementById("strHref1").href="javascript:showdiv1();";
+			}
+			function showdiv2(){
+				document.getElementById("hpn2").style.display="block";
+				document.getElementById("strHref2").innerHTML="Fold";
+				document.getElementById("strHref2").href="javascript:hidediv2();";
+			}
+			function hidediv2(){
+				document.getElementById("hpn2").style.display="none";
+				document.getElementById("strHref2").innerHTML="More";
+				document.getElementById("strHref2").href="javascript:showdiv2();";
+			}
+			function showdiv3(){
+				document.getElementById("hpn3").style.display="block";
+				document.getElementById("strHref3").innerHTML="Fold";
+				document.getElementById("strHref3").href="javascript:hidediv3();";
+			}
+			function hidediv3(){
+				document.getElementById("hpn3").style.display="none";
+				document.getElementById("strHref3").innerHTML="More";
+				document.getElementById("strHref3").href="javascript:showdiv3();";
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -37,7 +86,7 @@
 
 				<!-- Menu -->
 					<nav id="menu">
-						<h2>Menu</h2>
+						<h2>Menu</h2><br /><br />
 						<ul>
 							<li><a href="index.html">Homepage</a></li>
 							<li><a href="files/CV.pdf">Curriculum Vitae</a></li>
@@ -54,36 +103,35 @@
 							<h1>Research Experiences</h1>
 							<h2>War of Attrition</h2><br />
 							<p>I model a generalized war-of-attrition game to investigate the influence of asymmetry on social conflicts. This model is the first one that combines ex-ante asymmetry, multiple players, and incomplete information. I study both behavioral and welfare insights, and it is shown that they are strikingly different from those brought by the modeling of either symmetric or two-player war of attrition. For a closer look at my results, please see this <a href="ResearchOngoing.html">link</a> and thus I omit the summary of them here.</p>
-							<p>This study began in September 2018 and I have spent at least 500 hours on it. Professor <a href="http://nsd.pku.edu.cn/szdw/qzjs/w/262179.htm">Hao Wang</a> has been giving me instructions since the beginning, and later during the summer of 2019, I also started to receive suggestions from Professor <a href="http://www.gsm.pku.edu.cn/jsjjxq.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141&user_id=wengxi125">Xi Weng</a>. Moreover, I have been making contact with international scholars potentially interested in this study and the comments I have received so far are mainly positive. During this project, I make myself quite acquaintant with the literature of all forms of conflicts, like war of attrition, bargaining, contest, auction, etc., and further I differentiate my work from them in both technical and intuitive aspects.</p>
-							<p>Although the literature of war of attrition has a 40-year history, it still generates interest. Actually, right in September 2019, one of the leading journals of economic theory, <a href="https://econtheory.org/">Theoretical Economics</a>, published a paper (<a href="https://econtheory.org/ojs/index.php/te/article/viewFile/3158/24484/709">Kambe (2019)</a>) which studies a similar yet simplified version of my model. However, our setups are different enough to capture different insights, and our motivations clearly differ from each other as well. First, Kambe (2019) simplifies the problem by considering two-type incomplete information in which one of the two types is non-compromising, and this indicates that his model is essentially a perturbed complete-information game. In contrast, I study a model with continuous-type incomplete information which requires more complex techniques to analyze, and the infinite-dimension nature of the information structure brings more variation to the analysis which cannot appear in the two-type model. Second, Kambe (2019) focuses mainly on the analysis of equilibrium behavior, that is, who is likely to exit and when the war of attrition ends quickly. Nonetheless, my analysis shows that this focus should be attached with less importance as there are examples where the outcome or, equivalently, the welfare level is irrelevant to some variation of players' behavior. Namely, I show that it is something else, but not necessarily players' exact provision time, that determines the outcome. With these two points, I go further than Kambe (2019).</p>
-							<p>This study triggers some future interests. The first lies in making redistribution a cheap resolution to the delay problem occurring in wars of attrition. In the concluding part, I mention that by combining the advantages of both centralization and decentralization, redistribution can do better than central provision. Additionally, I suggest to look into the transformation process from war of attrition to a more cooperative institution, and I anticipate that the presence of the war-of-attrition benchmark may obstruct this process and that asymmetry can make it even worse.</p>
+							<div id="hpn1" style="display:none">
+								<p>This study began in September 2018 and I have spent at least 500 hours on it. Professor <a href="http://nsd.pku.edu.cn/szdw/qzjs/w/262179.htm">Hao Wang</a> has been giving me instructions since the beginning, and later during the summer of 2019, I also started to receive suggestions from Professor <a href="http://www.gsm.pku.edu.cn/jsjjxq.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141&user_id=wengxi125">Xi Weng</a>. Moreover, I have been making contact with international scholars potentially interested in this study and the comments I have received so far are mainly positive. During this project, I make myself quite acquaintant with the literature of all forms of conflicts, like war of attrition, bargaining, contest, auction, etc., and further I differentiate my work from them in both technical and intuitive aspects.</p>
+								<p>Although the literature of war of attrition has a 40-year history, it still generates interest. Actually, right in September 2019, one of the leading journals of economic theory, <a href="https://econtheory.org/">Theoretical Economics</a>, published a paper (<a href="https://econtheory.org/ojs/index.php/te/article/viewFile/3158/24484/709">Kambe (2019)</a>) which studies a similar yet simplified version of my model. However, our setups are different enough to capture different insights, and our motivations clearly differ from each other as well. First, Kambe (2019) simplifies the problem by considering two-type incomplete information in which one of the two types is non-compromising, and this indicates that his model is essentially a perturbed complete-information game. In contrast, I study a model with continuous-type incomplete information which requires more complex techniques to analyze, and the infinite-dimension nature of the information structure brings more variation to the analysis which cannot appear in the two-type model. Second, Kambe (2019) focuses mainly on the analysis of equilibrium behavior, that is, who is likely to exit and when the war of attrition ends quickly. Nonetheless, my analysis shows that this focus should be attached with less importance as there are examples where the outcome or, equivalently, the welfare level is irrelevant to some variation of players' behavior. Namely, I show that it is something else, but not necessarily players' exact provision time, that determines the outcome. With these two points, I go further than Kambe (2019).</p>
+								<p>This study triggers some future interests. The first lies in making redistribution a cheap resolution to the delay problem occurring in wars of attrition. In the concluding part, I mention that by combining the advantages of both centralization and decentralization, redistribution can do better than central provision. Additionally, I suggest to look into the transformation process from war of attrition to a more cooperative institution, and I anticipate that the presence of the war-of-attrition benchmark may obstruct this process and that asymmetry can make it even worse.</p>
+							</div>
+							<p><a href="javascript:showdiv1();" id="strHref1" class="btn-slide">More</a></p>
 							<br /><br /><p><h2>Textual Analysis and News Economics</h2><br />
+							<p>I utilized textual analysis and machine learning to study the sentiments of news and comments on a Chinese stock <a href="http://guba.eastmoney.com/">forum</a>. This project endured from October 2018 to June 2019 and was under the instruction of Professor <a href="http://nsd.pku.edu.cn/szdw/qzjs/s/262175.htm">Yan Shen</a>. Our main purpose was to train a learning model that, on the one hand, provides comparatively accurate prediction on the sentiments of different forum users, and on the other, reveals the relationship between the textual content and the sentiment it conveys.</p>
+							<div id="hpn2" style="display:none">
+								<p>This research consists of two stages. First, I crawled the news and comments published in the past few years from the on-line forum, and then I randomly selected a sample with which several machine learning models can be trained and tested. I manually labeled the sentiment inclination and the market expectation implied by each piece of information in this sample as being either positive, negative, or unknown. More importantly, I extracted key words from which I made the judgment on the sentiment and expectation. The second stage is to vectorize these labeled data and to use them to train machine learning models and compare their efficiency in sentiment-prediction and regularity-revelation. Experiment showed that TF-IDF was the most efficient vectorization method for this problem with specific complexity and data scale. I tried many learning models, and it turned out that SVM and deep neural networks were the winner in prediction while decision tree and other rule-learning models were more competent in summarizing regularities.</p>
+								<p>The prediction accuracy was about 87% which was better than most of Chinese-text sentiment prediction in literature. Further, the key-word analysis was interesting, as it demonstrated that laudatory/dirty words were important indicators of sentiments, however, certain examples showed that their efficacy suffered from sarcasm. Besides, stock jargons like "dragon head" and "chicken feather" were also telling.</p>
+							</div>
+							<p><a href="javascript:showdiv2();" id="strHref2" class="btn-slide">More</a></p>
 							<br /><br /><p><h2>Field Study in Jiangxi Province</h2><br />
+							<p>I led a research group in a field study conducted in Meibei, Jiangxi under the supervision of Professor <a href="http://nsd.pku.edu.cn/szdw/qzjs/x/262188.htm">Jintao Xu</a>. The topic assigned to my group was land institutions in China rural area. We summarized our findings and thoughts on this topic in a report, whose Chinese version is provided <a href="files/Researches/land institution.pdf">here</a>. Professor Xu has collected all groups' research reports and plans to compile them as a book which is scheduled for publication in 2020. My group's report is the last chapter of this book.</p>
+							<div id="hpn3" style="display:none">
+								<p>My group randomly selected 12 households in Meibei and carried out thorough interviews with members of each family. The main focus was the local execution of land policies enforced by superior governments, like the Household Responsibility System (HRS) during the early 1980s, the Agricultural To Non-Agricultural Policy during the late 1990s, the Grain To Green Project (GTGP) during the early 2000s, etc.. We also investigated some local innovation in the agricultural production pattern, for example, Meibei government entrusted a private company to concentrate farmers' lands for massive production.</p>
+								<p>China's rural agricultural production structure stays almost identical to that in the period of planned economy, that is, production is managed by a stratified structure and the superior managers are trusted with dominant power. On the other hand, the local government also frequently uses their power to interfere with land issues, especially when the implementation of a new policy is in progress. We found three significant patterns in this two-head management system. First, both superior powers are, to some extent, benevolent. For example, the production managers are active in supplying public goods and the government is willing to provide the funds. Second, this benevolence is only partial and they make many mistakes for lack of local information, which leaves space for corruption and rent-seeking. For instance, the company mentioned in the last paragragh was actually registered by several leading officers in the government and evidence showed that they had been appropriating public resources. Finally, the frequent reforms on land institutions have been reinforcing the concentration of both heads' power, even if this process is unintentional, and this trend tends to deepen the previous two patterns.</p>
+							</div>
+							<p><a href="javascript:showdiv3();" id="strHref3" class="btn-slide">More</a></p>
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
+							<p>Address: National School of Development, Peking University, Beijing, China<br />
+							   Email: <a href="mailto:hli12320@terpmail.umd.edu">hli12320@terpmail.umd.edu</a> / <a href="mailto:hongcheng.li@pku.edu.cn">hongcheng.li@pku.edu.cn</a><br />
+							   Phone: (+028) 18810719819</p>
 							<ul class="copyright">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
