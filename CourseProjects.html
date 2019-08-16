@@ -59,6 +59,16 @@
 				document.getElementById("in-strHref-a").innerHTML="Summary";
 				document.getElementById("in-strHref-a").href="javascript:showindiva();";
 			}
+			function showindivb(){
+				document.getElementById("in-hpn-b").style.display="block";
+				document.getElementById("in-strHref-b").innerHTML="Close Introduction";
+				document.getElementById("in-strHref-b").href="javascript:hideindivb();";
+			}
+			function hideindivb(){
+				document.getElementById("in-hpn-b").style.display="none";
+				document.getElementById("in-strHref-b").innerHTML="Introduction";
+				document.getElementById("in-strHref-b").href="javascript:showindivb();";
+			}
 			function showdiv3(){
 				document.getElementById("hpn3").style.display="block";
 				document.getElementById("strHref3").innerHTML="Fold";
@@ -68,6 +78,36 @@
 				document.getElementById("hpn3").style.display="none";
 				document.getElementById("strHref3").innerHTML="More";
 				document.getElementById("strHref3").href="javascript:showdiv3();";
+			}
+			function showdiv4(){
+				document.getElementById("hpn4").style.display="block";
+				document.getElementById("strHref4").innerHTML="Fold";
+				document.getElementById("strHref4").href="javascript:hidediv4();";
+			}
+			function hidediv4(){
+				document.getElementById("hpn4").style.display="none";
+				document.getElementById("strHref4").innerHTML="More";
+				document.getElementById("strHref4").href="javascript:showdiv4();";
+			}
+			function showdiv5(){
+				document.getElementById("hpn5").style.display="block";
+				document.getElementById("strHref5").innerHTML="Fold";
+				document.getElementById("strHref5").href="javascript:hidediv5();";
+			}
+			function hidediv5(){
+				document.getElementById("hpn5").style.display="none";
+				document.getElementById("strHref5").innerHTML="More";
+				document.getElementById("strHref5").href="javascript:showdiv5();";
+			}
+			function showdiv6(){
+				document.getElementById("hpn6").style.display="block";
+				document.getElementById("strHref6").innerHTML="Fold";
+				document.getElementById("strHref6").href="javascript:hidediv6();";
+			}
+			function hidediv6(){
+				document.getElementById("hpn6").style.display="none";
+				document.getElementById("strHref6").innerHTML="More";
+				document.getElementById("strHref6").href="javascript:showdiv6();";
 			}
 		</script>
 	</head>
@@ -137,6 +177,10 @@
 							
 							<br /><h2>Behavioral Collective Action</h2><br />
 							<div id="hpn4" style="display:none">
+								<p>My project team proposed a novel idea which combines both focal point theory and behavioral economics. This proposal was finished in Nov. 2018 and Professor <a href="http://www.gsm.pku.edu.cn/jsjjxq.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141&user_id=jumeng">Juanjuan Meng</a> provided valuable suggestions on this work. Please click <a href="files/Course Projects/behavioral collective action.pdf">here</a> to view the research proposal and <a href="files/Course Projects/ppt_behavioral collective action.pptx">here</a> for the presentation PPT.</p>
+								<p>This study proposes that when communication is prohibitively costly for a society, some irrational pattern shared or anticipated by all members may play an important role in equilibrium coordination. Namely, when people face multiple equilibria, the consensus on the presence of a behavioral element can be a <em>exogenous heuristics</em> that make people's strategy closer to this irrational pattern, so that this forms a <em>behavioral</em> collective action.</p>
+								<p>We used the <em>Thousand Effect</em> frequently seen in Chinese stock markets to present this idea. The thousand effect refers to that when stock indices has been hiking, then as they approach thousand numbers, like 2,000 and 3,000, investors tend to selloff their stocks and thus a devastating slump will follow. My team captured this phenomenon in many frequently referred indices, and we concluded that its occurrence hinges on the presence of a long-term (like months or years) steady hiking. This implies that this kind of stock-market slump may be an equilibrium-selecting process when the market becomes a spent bullet. Therefore, we conjectured that the thousand effect serves as an important coordinative heuristics to intermediate investors' behavior, even though most of them are rational decision makers who perform strategic moves.</p>
+								<p>I was in charge of the theoretical analysis, that is, I built a game model to formalize an equilibrium-selecting process. I found that, by assuming a probability of some players' being irrational and strictly performing thousand effect, the set of all possible equilibria shrinks towards the irrational strategy. Additionally, this shrinkage is concave, since when the proportion of irrationality is small, the speed of shrinking is larger than that in the large-irrationality-proportion case. This second-order property shows that even a small amount of behavioral element can have great influence.</p>
 							</div>
 							<p><a href="javascript:showdiv4();" id="strHref4" class="btn-slide">More</a></p>
 							
@@ -145,7 +189,7 @@
 								<p>I finished this project in June 2019 for a course on economic development. It is a development report based on both factoral and sectoral GDP-decomposition method. Please click <a href="files/Course Projects/china growth.pdf">here</a> to view the report and <a href="files/Course Projects/codes_china growth.rar">here</a> for the coding. For a quick understanding of what this report is about, please click the "summary" below.</p>
 								<div id="in-hpn-a" style="display:none;line-height:18px">
 									<font size="-0.5" face="Times" color="#bbbbbb">
-									<p style="margin-top:0"><strong>Summary.</strong> From both factoral and sectoral angles, this paper examines China’s economic growth since the Reform in 1978 in order to derive some growth patterns explaining the economic logic behind the great China Miracle. Our objective also lies in summarizing different views in literature of China’s growth and trying to mitigate some conflicts among the scholars, debates over the role of TFP and capital, the contribution of agriculture, etc.. Through out the paper, we examine the extent to which this paper is connected with and differentiated from previous studies.</p>
+									<p style="margin-top:0"><strong>Introduction.</strong> From both factoral and sectoral angles, this paper examines China’s economic growth since the Reform in 1978 in order to derive some growth patterns explaining the economic logic behind the great China Miracle. Our objective also lies in summarizing different views in literature of China’s growth and trying to mitigate some conflicts among the scholars, debates over the role of TFP and capital, the contribution of agriculture, etc.. Through out the paper, we examine the extent to which this paper is connected with and differentiated from previous studies.</p>
 									<p style="margin-top:-1em">For factoral analysis, we apply Zhu’s (2012) growth accounting approach at both aggregate and sectoral levels. We discover some change of role of the growth of two factors, TFP and capital, since although TFP’s contribution to total growth dominates during the entire history, it drops sharply from 77% to 57% after 2001 in company with the rise of capital growth whose explanatory power rise from less than 10% to 35%. We further show that this change during the early 2000s should be completely attributed to the factoral role interchange happening in non-agricultural sector, as TFP growth accounted for 75% of non-agricultural growth before 2001 while capital growth has explained half of it after 2001. However, the agricultural growth has been constantly driven by powerful TFP growth. Another phenomenon we disclose is that labor force has been escaping from agriculture to other industries implying an inter-sectoral structural transformation.</p>
 									<p style="margin-top:-1em">The labor migration pattern above makes sectoral analysis necessary. To illustrate the economic incentives driving the migration, we develop a useful notion, Model Price Ratio (MPR), defined as the theoretical wage of one sector to that of agricultural department deduced from standard Cobb-Douglas production function. The gap between the realized MPR and its theoretical value 1 demonstrates the deviation of reality from the theory that ideal labor market yields the same wages in different markets. Through three ways, we justify that this deviation is an adequate proxy for migration restriction. MPR has been obviously higher than 1 since the 1950s, and this confirms the existence of both demand and friction of China’s structural transformation. We also define the counterpart notion for capital, Model Price Ratio of Capital (MPRC), which stays close to 1 after 2001, but also has been steadily increasing since reform.</p>
 									<p style="margin-top:-1em">Finally, we draw some prospects on China’s future development. MPR’s rebound in 2016 shows that there will still be great demand for structural transformation, and that MPRC has increased sharply since 2013 implies that capital’s role will continue to rise. We make the policy suggestion that Chinese government should stick to serious reforms, and we list some examples.</p>
@@ -157,11 +201,25 @@
 							
 							<br /><h2>Font Recognition</h2><br />
 							<div id="hpn5" style="display:none">
+								<p>I took the course <em>Pattern Recognition</em> with graduate students from the Math Department in 2018, and this project was aimed to apply and compare different machine learning methods to differentiate different fonts. Please click <a href="files/Course Projects/font recognition.pdf">here</a> to view our report and <a href="https://github.com/LiuTed/FontRecognition">here</a> to see our GitHub repository for a detailed look. We used the <a href="http://archive.ics.uci.edu/ml/datasets/Character+Font+Images">dataset</a> provided by UCI Repository for analysis, and this set contains pictures of different characters in multiple fonts which we standardized to 64*64. After comparison, we decided to apply DAISY, a feature extraction method for visual data, to structure standard data. Moreover, we performed and discussed several machine learning models on the prediction of fonts. For an introduction of this project, please click the "introduction" below.</p>
+								<div id="in-hpn-b" style="display:none;line-height:18px">
+									<font size="-0.5" face="Times" color="#bbbbbb">
+									<p style="margin-top:0"><strong>Introduction.</strong> Classification and segmentation are two main problem in the field of computer vision, and has been well discussed in the past tens years. Font recognition is similar to semantic classification problem, it hopes to tell which font the character(s) in a image it belongs to.</p>
+									<p style="margin-top:-1em">The possible application of font recognition is various, for example, (i) to answer a curious person who simply wants to know the name of a font he came across, (ii) to convert photos of handwritten texts into files in computer(such as Word or PDF) with its corresponding type of font, (iii) to generate the electronic version of a published book with the corresponding type of font, (iv) to specify the font for text recognition, and make text recognition more precise, and (v) to help recognize the font to give the evidence for copyright dispute.</p>
+									<p style="margin-top:-1em">Traditionally, this work is taken by professional person, especially in the context of litigation. Human will use the serif design, strength change, angle of characters, etc. to determine which font one character belongs to. It is not a trivial job for computer, not only for the reason that font recognition needs carefully inspection, but also for the bad quality of image in most situation (low resolution, slight deflection, etc). Besides, there are many types of fonts are inherited from another, which brings more difficulty.</p>
+									<p style="margin-top:-1em">We decide to use font recognition as our project topic is for the reason that this is an interesting problem that is rarely discussed, while the related problem, semantic classification, has been almost solved. Therefore, we could try many methods and compare with the state-of-the-art techniques to gain a deeper insight of the methods we learn.</p>
+									<p style="margin-top:-1em">In this project, we tests naive Bayesian inference, multi-class SVM, decision tree, random forest, clustering algorithms and deep convolutional neural networks, and gives the conclusion that this problem has significant difference with semantic classification, and the non-triviality of this problem.</p>
+									<p style="margin-top:-1em">We have to admit that this work has a lot to improve. Given the limitation of hardware, we only tested seven fonts with thousands instances, which is unfair for DCNN and the scalability of methods can hardly be discussed.</p>
+									</font>
+								</div>
+								<p><a href="javascript:showindivb();" id="in-strHref-b">Introduction</a></p>
 							</div>
 							<p><a href="javascript:showdiv5();" id="strHref5" class="btn-slide">More</a></p>
 							
 							<br /><h2>PCA Improves OLS</h2><br />
 							<div id="hpn6" style="display:none">
+								<p>I utilized Principal Component Analysis (PCA) to improve the performance of Ordinary Least Square (OLS) regression model. Please click <a href="files/Course Projects/pca on ols.pdf">here</a> to view the Chinese-version paper and <a href="files/Course Projects/codes_pca on ols.rar">here</a> for the coding.</p>
+								<p>The purpose is to construct a set of control variables to enhance the statistical significance of a regression, say the one of <em>Y</em> with respect to <em>X</em>. The basic idea is to, first, choose a group of control variables according to economic theory, and then to conduct PCA on these variables to generate a new group in which each variable is perpendicular to each other. Finally, by summing up with weights the correlation coefficients between these PCA-processed variables and <em>Y</em> and <em>X</em>, one can choose the top variables in the ranking of these weighted sums as the final control variables. I give a numerical example in this paper which proves this method efficient.</p>
 							</div>
 							<p><a href="javascript:showdiv6();" id="strHref6" class="btn-slide">More</a></p>	
 						</div>
